@@ -34,6 +34,7 @@ final List<Products> products = [
     category: "Electronics",
     price: 180.0,
     oldprice:300.0,
+    isfavorite: true,
     imageUrl: "images/laptop.jpg",
     description: "Description of product 2",
   ),
@@ -47,6 +48,7 @@ final List<Products> products = [
   ), Products(
     name: "Puma",
     category: "Footware",
+    isfavorite: true,
     price: 170.0,
     oldprice:300.0,
     imageUrl: "images/shoes2.jpg",

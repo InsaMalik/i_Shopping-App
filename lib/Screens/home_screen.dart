@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shoppingapp/Controllers/Theme_controller.dart';
 import 'package:shoppingapp/Screens/All_products.dart';
+import 'package:shoppingapp/Screens/Notification_screen.dart';
 import 'package:shoppingapp/Screens/Widgets/Category_Chip.dart';
 import 'package:shoppingapp/Screens/Widgets/Custom_searchbar.dart';
 import 'package:shoppingapp/Screens/Widgets/Mycart_screen.dart';
@@ -56,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     const Spacer(),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () => Get.to(()=> NotificationScreen()),
                       icon: const Icon(Icons.notifications_none_outlined),
                     ),
                     IconButton(
