@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:shoppingapp/Controllers/Auth_controller.dart';
+import 'package:shoppingapp/Edit_Profile/Screen/Edit_Screen.dart';
+import 'package:shoppingapp/HelpCenter/Screen/HelpCenter_Screen.dart';
 import 'package:shoppingapp/MyOrder/Screen/My_order_screen.dart';
 import 'package:shoppingapp/Screens/Setting_Screen.dart';
 import 'package:shoppingapp/Screens/signIn_screen.dart';
+import 'package:shoppingapp/Shipping_Address/ShippingAddress_Screen.dart';
 import 'package:shoppingapp/utilities/App_textStyle.dart';
 
 class AccountScreen extends StatefulWidget {
@@ -79,9 +82,11 @@ class _AccountScreenState extends State<AccountScreen> {
         ),
         const SizedBox(height: 16,),
         OutlinedButton(
-        onPressed: (){},
+        onPressed: ()=> Get.to(()=>EditProfileScreen()),
         style: OutlinedButton.styleFrom(
-          padding: const EdgeInsets.symmetric(horizontal: 32,vertical:12),
+          padding: const EdgeInsets.symmetric(
+          horizontal: 32,
+          vertical:12),
           side: BorderSide(
             color: isDark ? Colors.white70 :Colors.black12,
           ),
@@ -150,10 +155,12 @@ class _AccountScreenState extends State<AccountScreen> {
                 }
                 else if(item['Title'] == "Shipping Address")
                 {
-
+                Get.to(()=> ShippingaddressScreen());
                 }
                 else if(item['Title'] == "Help Center")
-                {}
+                {
+                Get.to(()=> HelpcenterScreen());
+                }
               },
            ),
           );

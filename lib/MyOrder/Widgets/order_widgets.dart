@@ -77,7 +77,22 @@ class Ordercard extends StatelessWidget {
                 ],
               ),
              ),
-           ],),
+             Divider(height:1,color:Colors.grey.shade200,),
+             InkWell(
+              onTap: onViewDetails,
+               child: Padding(
+                padding:const EdgeInsets.symmetric(vertical: 12,),
+                child: Text(
+                  'View Details',
+                  style: AppTextStyle.withColor(
+                    AppTextStyle.MediumButton,
+                    Theme.of(context).primaryColor,
+                   ),
+                ),
+              ),
+             ),
+           ],
+          ),
     );
   }
   Widget _buildStatuschip(BuildContext context, String type){
